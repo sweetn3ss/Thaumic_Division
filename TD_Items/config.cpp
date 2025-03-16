@@ -161,6 +161,27 @@ class cfgWeapons {
         };
         ACE_isFieldRationItem = 0;
     };
+    class TD_Potions_Medium_Yeet: ACE_ItemCore {
+        displayName = "Splash Potion";
+        scope = 2;
+        author = "Gray";
+        descriptionShort = "A strange bottle, filled with a volatile potion.";
+        model = "\TD_Items\data\yeet_potion.p3d";
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+        hiddenSelections[]={
+            "camo1",
+            "camo2",
+            "camo3"
+        };
+        hiddenSelectionsTextures[]={
+            "TD_Items\data\yeet_potion_camo1_ca.paa",
+            "TD_Items\data\yeet_potion_camo2_co.paa",
+            "TD_Items\data\yeet_potion_camo3_ca.paa"
+        };
+        ACE_isFieldRationItem = 0;
+    };
 };
 class cfgVehicles {
     class Land_DrillAku_F;
@@ -264,6 +285,24 @@ class cfgVehicles {
         };
         hiddenSelectionsTextures[]={
             "TD_Items\data\brick_camo1_co.paa"
+        };
+    };
+    class TD_Potions_Medium_Yeet: Land_DrillAku_F {
+        author = "Gray";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Yeet Potion";
+        editorSubcategory = "TD_Props";
+        model = "\TD_Items\data\yeet_potion.p3d";
+        hiddenSelections[]={
+            "camo1",
+            "camo2",
+            "camo3"
+        };
+        hiddenSelectionsTextures[]={
+            "TD_Items\data\yeet_potion_camo1_ca.paa",
+            "TD_Items\data\yeet_potion_camo2_co.paa",
+            "TD_Items\data\yeet_potion_camo3_ca.paa"
         };
     };
 };
