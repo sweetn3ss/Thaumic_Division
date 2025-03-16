@@ -18,6 +18,50 @@ class cfgEditorSubcategories {
         displayName = "Wizard Items";
     };
 };
+class cfgAmmo {
+    class ACE_SatchelCharge_Remote_Ammo_Thrown;
+    class TD_Grenade_HE_Ammo: ACE_SatchelCharge_Remote_Ammo_Thrown {
+        hit=0;
+		indirectHit=0;
+		indirectHitRange=0;
+		defaultMagazine="MM_Bubble_Mag";
+		model="\TD_Items\data\impact_stone.p3d";
+		explosive=0;
+		explosionType="";
+		mineModelDisabled="\TD_Items\data\impact_stone.p3d";
+		triggerWhenDestroyed=0;
+		explosionEffects="";
+		CraterEffects="";
+		soundHit1[]= {
+			"",
+			0,
+			0,
+			0
+		};
+		multiSoundHit[]={};
+		mineInconspicuousness=9999;
+		timetolive=15;
+		explosionTime=6;
+		effectFlare="";
+		effectsFire="";
+		effectsMissile="";
+		effectsSmoke="";
+		explosionEffectsDir="";
+		explosionForceCoef="";
+		explosionPos="";
+		explosionEffectsRadius=0;
+		explosionSoundEffect="";
+		SoundSetExplosion[]= {
+			""
+		};
+		class CamShakeExplode {
+			power=0;
+			duration=0;
+			frequency=0;
+			distance=0;
+		};
+    };
+};
 class cfgWeapons {
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
@@ -190,6 +234,36 @@ class cfgVehicles {
             "TD_Items\data\small_pot_camo1_ca.paa",
             "TD_Items\data\small_pot_camo2_co.paa",
             ""
+        };
+    };
+    class TD_Grenades_Impact_Stone: Land_DrillAku_F {
+        author = "Gray";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Impact Stone";
+        editorSubcategory = "TD_Props";
+        model = "\TD_Items\data\impact_stone.p3d";
+        hiddenSelections[]={
+            "camo1",
+            "camo2"
+        };
+        hiddenSelectionsTextures[]={
+            "TD_Items\data\impact_stone_camo1_co.paa",
+            "TD_Items\data\impact_stone_camo2_ca.paa"
+        };
+    };
+    class TD_Grenades_Impact_Brick: Land_DrillAku_F {
+        author = "Gray";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Magician's Brick";
+        editorSubcategory = "TD_Props";
+        model = "\TD_Items\data\magicians_brick.p3d";
+        hiddenSelections[]={
+            "camo1"
+        };
+        hiddenSelectionsTextures[]={
+            "TD_Items\data\brick_camo1_co.paa"
         };
     };
 };
