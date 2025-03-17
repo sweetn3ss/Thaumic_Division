@@ -65,7 +65,7 @@ class cfgAmmo {
 class cfgWeapons {
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
-
+    
     // this is where the fun begins
     class TD_Potions_Large_Health: ACE_ItemCore {
         displayName = "Potion of Health";
@@ -304,5 +304,13 @@ class cfgVehicles {
             "TD_Items\data\yeet_potion_camo2_co.paa",
             "TD_Items\data\yeet_potion_camo3_ca.paa"
         };
+    };
+    class TD_Summon_Cigarettes_FH: Land_DrillAku_F {
+        author = "Gray";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "500 Cigarettes";
+        editorSubcategory = "TD_Props";
+        model = "\TD_Items\data\500cigs.p3d";
     };
 };
