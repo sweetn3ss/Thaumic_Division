@@ -220,7 +220,7 @@ class cfgVehicles {
 				showWindow = 0;
 				hideOnUse = 1;
 				condition = "alive player";
-				statement = "[""this"",""player"",""TD_Potions_Large_Health""] call TD_fnc_propToItem";
+				statement = "[this, player, 'TD_Potions_Large_Health'] call TD_fnc_propToItem";
 				onlyForPlayer = 1;
 				shortcut="";
 				aiMaxRange = 1;
