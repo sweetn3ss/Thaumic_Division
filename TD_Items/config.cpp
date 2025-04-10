@@ -202,15 +202,6 @@ class cfgVehicles {
 			"TD_Items\data\large_pot_camo2_co.paa",
 			"TD_Items\data\large_pot_camo3_ca.paa"
 		};
-		class ACE_Actions {
-			class td_pickup_lhp {
-				displayName = "Pick up bottle";
-				condition="true";
-				statement = "[""TD_Potions_Large_Health""] call TD_fnc_propToItem";
-				icon="";
-				position = "[0,0,0]";
-			};
-		};
 		class UserActions {
 			class TD_Pickup {
 				displayName = "Pick up item";
@@ -262,6 +253,22 @@ class cfgVehicles {
 			"TD_Items\data\large_pot_camo1_ca.paa",
 			"TD_Items\data\large_pot_empty_co.paa",
 			""
+		};
+		class UserActions {
+			class TD_Pickup {
+				displayName = "Pick up item";
+				displayNameDefault = "Pick up item";
+				priority = 10;
+				radius = 3;
+				showWindow = 0;
+				hideOnUse = 1;
+				condition = "alive player";
+				statement = "[this, player, 'TD_Potions_Large_Empty'] call TD_fnc_propToItem";
+				onlyForPlayer = 1;
+				shortcut="";
+				aiMaxRange = 1;
+				position = "camera";
+			};
 		};
 	};
 	class TD_Potions_Small_Empty: TD_Potions_Small_Invis {
@@ -337,5 +344,13 @@ class cfgVehicles {
 		displayName = "500 Cigarettes";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\500cigs.p3d";
+	};
+	class TD_Book_Small_Twinks: Land_DrillAku_F {
+		author = "Gray";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Dark Magic for Twinks";
+		editorSubcategory = "TD_Props";
+		model = "\TD_Items\data\book_small.p3d";
 	};
 };
