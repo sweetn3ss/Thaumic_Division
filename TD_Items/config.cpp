@@ -353,4 +353,13 @@ class cfgVehicles {
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\book_small.p3d";
 	};
+	class Land_TripodScreen_01_large_F;
+	class TD_Casting_Effect_Sigil: Land_TripodScreen_01_large_F {
+		author = "Gray";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Casting Sigil";
+		editorSubcategory = "TD_Props";
+		model = "\TD_Items\data\casting.p3d";
+	};
 };
