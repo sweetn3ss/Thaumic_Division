@@ -15,6 +15,7 @@ class cfgFunctions {
         class functions {
             file = "TD_Functions\functions";
             class propToItem {}; // TD_fnc_propToItem;
+            class getLookAtPos {}; // TD_fnc_getLookAtPos;
         };
     };
 };

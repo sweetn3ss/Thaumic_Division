@@ -22,6 +22,7 @@ class Ace_Medical_Treatment_Actions {
     class TD_Potions_Large_Health_Act: EACA {
         displayName = "Push Health Potion (Large)";
         displayNameProgress = "Pushing Large Potion of Health";
+        condition = "_patient call ace_medical_status_fnc_isInStableCondition";
         treatmentTime = 8;
         allowedSelections[]={"Head"};
         category = "medication";

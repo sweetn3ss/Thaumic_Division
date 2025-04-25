@@ -243,16 +243,14 @@ class cfgVehicles {
 		scopeCurator = 2;
 		displayName = "Large Potion Bottle";
 		editorSubcategory = "TD_Props";
-		model = "\TD_Items\data\large_potion.p3d";
+		model = "\TD_Items\data\large_potion_empty.p3d";
 		hiddenSelections[]={
 			"camo1",
-			"camo2",
-			"camo3"
+			"camo2"
 		};
 		hiddenSelectionsTextures[]={
 			"TD_Items\data\large_pot_camo1_ca.paa",
-			"TD_Items\data\large_pot_empty_co.paa",
-			""
+			"TD_Items\data\large_pot_empty_co.paa"
 		};
 		class UserActions {
 			class TD_Pickup {
