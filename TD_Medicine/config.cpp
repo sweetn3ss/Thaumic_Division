@@ -23,6 +23,7 @@ class Ace_Medical_Treatment_Actions {
         displayName = "Push Health Potion (Large)";
         displayNameProgress = "Pushing Large Potion of Health";
         condition = "_patient call ace_medical_status_fnc_isInStableCondition";
+        medicRequired = "ace_medical_treatment_medicPAK";
         treatmentTime = 8;
         allowedSelections[]={"Head"};
         category = "medication";
