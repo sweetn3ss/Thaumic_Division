@@ -1,18 +1,22 @@
 /*
-    fnc_getLookAtPos.sqf
-    Returns the 3D world coordinates the player is looking at, up to 100m.
+	Author: Gray
+
+	Description:
+		Gets position ATL where player is looking.
+
+	Parameter(s):
+        NONE
+
+    Returns:
+        Coordinates: [x,y,0]
+        
+	Example:
+		["cfgWeapons","TD_Potions_Large_Health" ] call TD_fnc_propToItem;
 */
 
-params ["_unit"];
+_lookPos = screenToWorld [0.5,0.5];
 
-private _start = eyePos _unit;
-private _dir = eyeDirection _unit;
-private _end = _start vectorAdd (_dir vectorMultiply 100);
 
-private _hit = lineIntersectsSurfaces [_start, _end, _unit, objNull, true, 1, "VIEW", "FIRE"];
-
-if (_hit isNotEqualTo []) then {
-    (_hit select 0) select 0 // just return the hit position
-} else {
-    [] // return empty array if nothing is hit
+if (true) exitWith {
+    _lookPos
 };

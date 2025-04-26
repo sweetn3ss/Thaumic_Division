@@ -1,0 +1,1 @@
+createVehicle ["ciggyes",[] call TD_fnc_getLookAtPos,];
