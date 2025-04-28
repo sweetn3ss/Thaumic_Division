@@ -101,7 +101,7 @@ class cfgVehicles {
                     displayName = "Summon Bonfire";
                     icon = "";
                     condition = "(""TD_Reagent_Basic_Coal"" in (items player) and ""TD_Reagent_Basic_Stone"" in (items player))";
-                    statement = "hint str time";
+                    statement = "player execVM 'TD_Functions\functions\fn_summonBonfire.sqf'";
                 };
             };
 		};

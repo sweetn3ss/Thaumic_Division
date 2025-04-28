@@ -22,10 +22,10 @@ class cfgWeapons {
 		//model = "TD_Weapons\data\elder_wand.p3d";
 		displayName = "Elder Wand";
 		descriptionShort = "A wizard's focusing device.";
-		hiddenSelections[]={"camo1"};
+		/*hiddenSelections[]={"camo1"};
 		hiddenSelectionsTextures[]={
 			"BCG_Melee\data\thunderhammer\camo1_CO.paa",
 			"BCG_Melee\data\thunderhammer\camo2_CO.paa"
-		};
+		};*/
 	};
 };

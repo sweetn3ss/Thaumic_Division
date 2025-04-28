@@ -335,13 +335,21 @@ class cfgVehicles {
 			"TD_Items\data\yeet_potion_camo3_ca.paa"
 		};
 	};
-	class TD_Summon_Cigarettes_FH: Land_DrillAku_F {
+	class Land_CrabCages_F;
+	class TD_Summon_Cigarettes_FH: Land_CrabCages_F {
 		author = "Gray";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "500 Cigarettes";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\500cigs.p3d";
+		class ACE_Actions {
+			class td_getciggy {
+				displayName = "Grab Cigarette";
+				condition = "alive _this";
+				statement = "_player assignItem 'cigs_morley_cig0'";
+			};
+		};
 	};
 	class TD_Book_Small_Twinks: Land_DrillAku_F {
 		author = "Gray";
@@ -351,7 +359,6 @@ class cfgVehicles {
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\book_small.p3d";
 	};
-	class Land_CrabCages_F;
 	class TD_Casting_Effect_Sigil: Land_CrabCages_F {
 		author = "Gray";
 		scope = 2;
