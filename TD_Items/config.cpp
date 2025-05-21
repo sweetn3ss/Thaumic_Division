@@ -344,10 +344,12 @@ class cfgVehicles {
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\500cigs.p3d";
 		class ACE_Actions {
-			class td_getciggy {
-				displayName = "Grab Cigarette";
-				condition = "alive _this";
-				statement = "_player assignItem 'cigs_morley_cig0'";
+				class ACE_MainActions {
+					class td_getciggy {
+					displayName = "Grab Cigarette";
+					condition = "alive _this";
+					statement = "_player assignItem 'cigs_morley_cig0'";
+				};
 			};
 		};
 	};
