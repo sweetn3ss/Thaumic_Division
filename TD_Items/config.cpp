@@ -2,15 +2,33 @@ class cfgPatches {
 	class TD_Items {
 		name = "Thaumic Division - Items";
 		authors[]={
-			"gray",
+			"Mesa",
 			"neifer",
 			"the voices"
 		};
-		units[]={};
+		weapons[]={};
+		units[]={
+			"TD_Potions_Large_Health",
+			"TD_Potions_Small_Invis",
+			"TD_Potions_Large_Empty",
+			"TD_Potions_Small_Empty",
+			"TD_Potions_Medium_Yeet",
+			"TD_Grenades_Impact_Stone",
+			"TD_Grenades_Impact_Brick",
+			"TD_Summon_Cigarettes_FH",
+			"TD_Book_Small_Twinks",
+			"TD_Casting_Effect_Sigil"
+		};
 		requiredVersion=0.1;
 		requiredAddons[]={
-			"ace_field_rations"
+			"ace_field_rations",
+			"A3_Structures_F_Furniture"
 		};
+	};
+};
+class cfgEditorCategories {
+	class TD_Umbrella {
+		displayName = "Thaumic Division";
 	};
 };
 class cfgEditorSubcategories {
@@ -70,7 +88,7 @@ class cfgWeapons {
 	class TD_Potions_Large_Health: ACE_ItemCore {
 		displayName = "Potion of Health";
 		scope = 2;
-		author = "Gray";
+		author = "Mesa";
 		descriptionShort = "A potion concocted of the finest ingredients, to mend one's wounds.";
 		model = "\TD_Items\data\large_potion.p3d";
 		hiddenSelections[]={
@@ -96,7 +114,7 @@ class cfgWeapons {
 	class TD_Potions_Small_Invis: ACE_ItemCore {
 		displayName = "Potion of Invisibility";
 		scope = 2;
-		author = "Gray";
+		author = "Mesa";
 		descriptionShort = "A potion concocted of the finest ingredients, to mend one's wounds.";
 		model = "\TD_Items\data\small_potion.p3d";
 		hiddenSelections[]={
@@ -122,7 +140,7 @@ class cfgWeapons {
 	class TD_Potions_Large_Empty: ACE_ItemCore {
 		displayName = "Empty Potion";
 		scope = 2;
-		author = "Gray";
+		author = "Mesa";
 		descriptionShort = "A large empty bottle, once filled with potion.";
 		model = "\TD_Items\data\large_potion.p3d";
 		class ItemInfo: CBA_MiscItem_ItemInfo {
@@ -143,7 +161,7 @@ class cfgWeapons {
 	class TD_Potions_Small_Empty: ACE_ItemCore {
 		displayName = "Empty Potion";
 		scope = 2;
-		author = "Gray";
+		author = "Mesa";
 		descriptionShort = "A small empty bottle, once filled with potion.";
 		model = "\TD_Items\data\small_potion.p3d";
 		class ItemInfo: CBA_MiscItem_ItemInfo {
@@ -164,7 +182,7 @@ class cfgWeapons {
 	class TD_Potions_Medium_Yeet: ACE_ItemCore {
 		displayName = "Splash Potion";
 		scope = 2;
-		author = "Gray";
+		author = "Mesa";
 		descriptionShort = "A strange bottle, filled with a volatile potion.";
 		model = "\TD_Items\data\yeet_potion.p3d";
 		class ItemInfo: CBA_MiscItem_ItemInfo {
@@ -185,11 +203,14 @@ class cfgWeapons {
 };
 class cfgVehicles {
 	class Land_DrillAku_F;
+	class Land_CrabCages_F;
+	class Land_ChairPlastic_F;
 	class TD_Potions_Large_Health: Land_DrillAku_F {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Large Potion of Health";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\large_potion.p3d";
 		hiddenSelections[]={
@@ -220,10 +241,11 @@ class cfgVehicles {
 		};
 	};
 	class TD_Potions_Small_Invis: TD_Potions_Large_Health {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Small Potion of Invisibility";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\small_potion.p3d";
 		hiddenSelections[]={
@@ -238,10 +260,11 @@ class cfgVehicles {
 		};
 	};
 	class TD_Potions_Large_Empty: TD_Potions_Large_Health {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Large Potion Bottle";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\large_potion_empty.p3d";
 		hiddenSelections[]={
@@ -270,10 +293,11 @@ class cfgVehicles {
 		};
 	};
 	class TD_Potions_Small_Empty: TD_Potions_Small_Invis {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Small Potion Bottle";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\small_potion.p3d";
 		hiddenSelections[]={
@@ -288,10 +312,11 @@ class cfgVehicles {
 		};
 	};
 	class TD_Grenades_Impact_Stone: Land_DrillAku_F {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Impact Stone";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\impact_stone.p3d";
 		hiddenSelections[]={
@@ -304,10 +329,11 @@ class cfgVehicles {
 		};
 	};
 	class TD_Grenades_Impact_Brick: Land_DrillAku_F {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Magician's Brick";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\magicians_brick.p3d";
 		hiddenSelections[]={
@@ -318,10 +344,11 @@ class cfgVehicles {
 		};
 	};
 	class TD_Potions_Medium_Yeet: Land_DrillAku_F {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Yeet Potion";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\yeet_potion.p3d";
 		hiddenSelections[]={
@@ -335,37 +362,41 @@ class cfgVehicles {
 			"TD_Items\data\yeet_potion_camo3_ca.paa"
 		};
 	};
-	class Land_CrabCages_F;
-	class TD_Summon_Cigarettes_FH: Land_CrabCages_F {
-		author = "Gray";
+	class TD_Summon_Cigarettes_FH: Land_ChairPlastic_F {
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "500 Cigarettes";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
+		acex_sitting_canSit = 0;
+		ace_dragging_canCarry = 0;
 		model = "\TD_Items\data\500cigs.p3d";
 		class ACE_Actions {
-				class ACE_MainActions {
-					class td_getciggy {
-					displayName = "Grab Cigarette";
-					condition = "alive _this";
-					statement = "_player assignItem 'cigs_morley_cig0'";
-				};
+			class td_getciggy {
+				displayName = "Grab Cigarette";
+				condition = "true";
+				exceptions[]={};
+				distance = 1.5;
+				statement = "player addItem 'cigs_morley_cig0'";
 			};
 		};
 	};
 	class TD_Book_Small_Twinks: Land_DrillAku_F {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Dark Magic for Twinks";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\book_small.p3d";
 	};
 	class TD_Casting_Effect_Sigil: Land_CrabCages_F {
-		author = "Gray";
+		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Casting Sigil";
+		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\casting.p3d";
 		hiddenSelections[]={
