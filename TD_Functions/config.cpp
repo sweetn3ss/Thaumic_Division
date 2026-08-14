@@ -17,6 +17,8 @@ class cfgFunctions {
             class propToItem {}; // TD_fnc_propToItem;
             class getLookAtPos {}; // TD_fnc_getLookAtPos;
             class getCiggy {}; // TD_fnc_getCiggy;
+            class itemToProp {}; // TD_fnc_itemToProp;
+            class summonBonfire {}; // TD_fnc_summonBonfire;
         };
     };
     class TD_Init {

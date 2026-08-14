@@ -2,7 +2,7 @@ class cfgPatches {
     class TD_Weapons {
         name = "Thaumic Division - Weapons";
         authors[]={
-            "Gray"
+            "Mesa"
         };
         units[]={};
         weapons[]={};

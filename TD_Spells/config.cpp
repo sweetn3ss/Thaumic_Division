@@ -2,7 +2,7 @@ class cfgPatches {
     class TD_Spells {
         name = "Thaumic Division - Spells";
         authors[]={
-            "Gray",
+            "Mesa",
             "Indie"
         };
         units[]={};
@@ -17,7 +17,7 @@ class cfgWeapons {
     class ItemCore;
     class InventoryWeapon_Base_F;
     class TD_Casting_Focus_Basic: ItemCore {
-        author = "Gray";
+        author = "Mesa";
         scope = 2;
         scopeArsenal = 2;
         displayName = "Alchemist's Pocket Tools";
@@ -34,7 +34,7 @@ class cfgWeapons {
 		};
     };
     class TD_Reagent_Basic_Coal: ItemCore {
-        author = "Gray";
+        author = "Mesa";
         scope = 2;
         scopeArsenal = 2;
         displayName = "Small Lump of Coal";
@@ -51,7 +51,7 @@ class cfgWeapons {
 		};
     };
     class TD_Reagent_Basic_Stone: ItemCore {
-        author = "Gray";
+        author = "Mesa";
         scope = 2;
         scopeArsenal = 2;
         displayName = "Small Rock";
@@ -72,26 +72,6 @@ class cfgVehicles {
 	class Man;
 	class CAManBase : Man {
 		class ACE_SelfActions {
-			/*class bcg_anims {
-				displayName = "BCG Fortnite";
-				icon = "";
-				condition = "(""BCG_Fortnite_Key"" in (items _player))";
-				class bcg_Dance {
-					displayName = "Skinwalking";
-					icon = "";
-					condition = "";
-					statement = "[player, 'bcg_fortnitedance01'] remoteExec ['switchMove', 0]";
-					exceptions[]={};
-				};
-				class BCG_Cancel
-				{
-					displayName = "stopp";
-					icon = "\KKA3_ACE_Extension_Anim\data\ui_cancel.paa";
-					condition = "";
-					exceptions[] = {};
-					statement = "[ace_player, ''] remoteExec ['switchMove', 0]";
-				};
-			};*/
             class td_crafting {
                 displayName = "Reagent Crafting";
                 icon = "";

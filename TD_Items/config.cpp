@@ -86,7 +86,7 @@ class cfgWeapons {
 		
 	// this is where the fun begins
 	class TD_Potions_Large_Health: ACE_ItemCore {
-		displayName = "Potion of Health";
+		displayName = "Potion of Health (Large)";
 		scope = 2;
 		author = "Mesa";
 		descriptionShort = "A potion concocted of the finest ingredients, to mend one's wounds.";
@@ -180,7 +180,7 @@ class cfgWeapons {
 		ACE_isFieldRationItem = 0;
 	};
 	class TD_Potions_Medium_Yeet: ACE_ItemCore {
-		displayName = "Splash Potion";
+		displayName = "Potion of Liquid Conflagration";
 		scope = 2;
 		author = "Mesa";
 		descriptionShort = "A strange bottle, filled with a volatile potion.";
@@ -202,6 +202,23 @@ class cfgWeapons {
 	};
 };
 class cfgVehicles {
+	class Man;
+	class CAManBase : Man {
+		class ACE_SelfActions {
+            class td_item_actions {
+                displayName = "Magic Item Actions";
+                icon = "";
+                condition = "";
+                statement = "";
+                class td_item_healthpotion_drop {
+                    displayName = "Drop Health Potion";
+                    icon = "";
+                    condition = "(""TD_Potions_Large_Health"" in (items player))";
+                    statement = "[""TD_Potions_Large_Health""] call TD_fnc_itemToProp";
+                };
+            };
+		};
+	};
 	class Land_DrillAku_F;
 	class Land_CrabCages_F;
 	class Land_ChairPlastic_F;
@@ -347,7 +364,7 @@ class cfgVehicles {
 		author = "Mesa";
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "Yeet Potion";
+		displayName = "Potion of Liquid Conflagration";
 		editorCategory = "TD_Umbrella";
 		editorSubcategory = "TD_Props";
 		model = "\TD_Items\data\yeet_potion.p3d";
@@ -378,7 +395,7 @@ class cfgVehicles {
 				condition = "true";
 				exceptions[]={};
 				distance = 1.5;
-				statement = "player addItem 'cigs_morley_cig0'";
+				statement = "player addItem 'cigs_morley_cig0'; _target say3D 'cigs_unwrap_01'";
 			};
 		};
 	};
