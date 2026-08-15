@@ -2,7 +2,7 @@ class cfgPatches {
     class TD_Medicine {
         name = "Thaumic Division - Medicine";
         authors[]={
-            "Gray"
+            "Mesa"
         };
         units[]={};
         weapons[]={};
